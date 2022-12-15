@@ -1,0 +1,18 @@
+[package]
+name = "nftickets"
+version = "0.1.0"
+edition = "2022"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
+multitoken-io = { git = "https://github.com/gear-dapps/multitoken.git"}
+gear-lib = { git = "https://github.com/gear-dapps/gear-lib.git"}
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
+
+[dev-dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", features = ["debug"], branch = "stable" }
+gtest = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
