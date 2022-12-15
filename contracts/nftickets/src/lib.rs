@@ -23,13 +23,13 @@ pub struct Event {
     pub description: String,
     pub event_id: u128,
 
-
     // TicketData
     pub available_tickets: u128,
     pub date: u128,
     pub location: String,
     pub tickets: u128,
     pub ticket_id: u128,
+    pub ticket_art_uri: String,
     
     // TicketBuyerData
     pub buyers_data : BTreeSet<ActorId>,
