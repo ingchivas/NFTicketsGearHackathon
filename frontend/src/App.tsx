@@ -15,6 +15,7 @@ function Component() {
       <Header isAccountVisible={isAccountReady} />
       <main className='flex flex-col'>
         {isAppReady ? <Routing /> : <ApiLoader />}
+        {/* <Routing /> */}
       </main>
     </div>
   );

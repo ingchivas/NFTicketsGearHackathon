@@ -21,12 +21,14 @@ function Home() {
             <p>Introducing, the best way of selling concert tickets. Based on the Gear blockchain and NFT technology. </p>
 
             <div className="py-4 flex justify-center items-center">
-              <button
-                type="button"
-                className="flex-0 p-2 font-bold bg-indigo-600 border-2 border-indigo-600 rounded hover:bg-transparent transition-all"
-              >
-                Get started
-              </button>
+              <a href="/buy">
+                <button
+                  type="button"
+                  className="flex-0 p-2 font-bold bg-indigo-600 border-2 border-indigo-600 rounded hover:bg-transparent transition-all"
+                >
+                  Get started
+                </button>
+              </a>
             </div>
           </div>
         </div>
