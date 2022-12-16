@@ -31,7 +31,7 @@ const payloads = {
   },
   buyTickets: function (amount, metadata) {
     return {
-      BuyTickets: {
+      buyevtickets: {
         amount: amount,
         metadata: metadata,
       }

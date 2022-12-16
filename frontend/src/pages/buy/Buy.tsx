@@ -25,7 +25,7 @@ function Buy() {
     <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div className="p-4 rounded bg-slate-900">
         <h2 className="pb-4 font-bold text-xl">Taylor Swift night (Taylor&#39;s birthday party)</h2>
-        <img src={taylor} alt="" width={500} />
+        <img className="rounded shadow" src={taylor} alt="" width={500} />
         <div className="pt-4 flex justify-center items-center">
           <button
             type="button"

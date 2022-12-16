@@ -3,8 +3,11 @@ import fs from "fs";
 
 export default async function sendMessage(payload) {
   const destination = process.env.PROGRAM_ID
-  const gearApi = await GearApi.create();
-  const meta = await getWasmMetadata(fs.readFileSync("../contract/event.meta.wasm"));
+  const gearApi = await GearApi.create({
+    providerAddress: "wss://rpc-node.gear-tech.io"
+  });
+
+  const meta = await getWasmMetadata(fs.readFileSync("./contract/event.meta.wasm"));
   const keyring = await GearKeyring.fromSuri('//Alice'); //Default Accounts
 
   try {
