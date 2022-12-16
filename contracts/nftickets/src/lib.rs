@@ -99,7 +99,7 @@ extern "C" fn meta_state () -> *mut [i32;2]
             }
         },
         EventStateQ::UserTickets{user} => EventStateR::UserTickets {
-            tickets: concert
+            tickets: event
                 .metadata
                 .get(&user)
                 .unwrap_or(&BTreeMap::new())
