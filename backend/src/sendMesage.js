@@ -4,7 +4,7 @@ import fs from "fs";
 export default async function sendMessage(payload) {
   const destination = process.env.PROGRAM_ID
   const gearApi = await GearApi.create();
-  const meta = await getWasmMetadata(fs.readFileSync("../contract/algo.meta.wasm"));
+  const meta = await getWasmMetadata(fs.readFileSync("../contract/event.meta.wasm"));
   const keyring = await GearKeyring.fromSuri('//Alice'); //Default Accounts
 
   try {
