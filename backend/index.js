@@ -1,12 +1,14 @@
 import 'dotenv/config'
 import express from "express";
 import bodyParser from 'body-parser';
+import cors from "cors";
 
 import payloads from './src/payloads.js';
 import sendMessage from './src/sendMesage.js';
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post('/sendMessage/create', async function (req, res) {
   const { creator, name, description, number_of_tickets, date } = req.body;
@@ -17,7 +19,7 @@ app.post('/sendMessage/create', async function (req, res) {
     const payload = payloads.create(creator, name, description, number_of_tickets, date);
     const result = await sendMessage(payload);
 
-    console.log("sendMessage > ", body, result);
+    console.log("sendMessage > ", req.body, result);
 
     res.json({ success: true, result });
   } catch (error) {
@@ -27,15 +29,17 @@ app.post('/sendMessage/create', async function (req, res) {
 });
 
 app.post('/sendMessage/buyTickets', async function (req, res) {
-  const { amount, metadata } = req.body;
+  const { quantity, metadata } = req.body;
 
-  if (!amount || !metadata) return res.status(400).json({ success: false, message: "A parameter is missing." })
+  //console.log(req.body);
+
+  if (!quantity || metadata != undefined) return res.status(400).json({ success: false, message: "A parameter is missing." })
 
   try {
-    const payload = payloads.buyTickets(amount, metadata);
+    const payload = payloads.buyTickets(quantity, metadata);
     const result = await sendMessage(payload);
 
-    console.log("sendMessage > ", body, result);
+    console.log("sendMessage > ", req.body, result);
 
     res.json({ success: true, result });
   } catch (error) {
