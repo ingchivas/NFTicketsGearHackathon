@@ -40,3 +40,4 @@ testWallet = "126dp8jqShqW65FvNkcb9cTMd1kydPMhmbmohuwmjY347qVN"
 colors = wallet2pallete(testWallet)
 
 plotColors(colors)
+print(colors)
