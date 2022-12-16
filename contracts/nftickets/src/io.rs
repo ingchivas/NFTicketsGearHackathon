@@ -66,7 +66,6 @@ pub enum EventStateR{
         event_id: u128,
         tickets_available: u128,
         tickets_sold: u128,
-        date: u128,
     },
     Buyers {
         buyers: BTreeSet<ActorId>,

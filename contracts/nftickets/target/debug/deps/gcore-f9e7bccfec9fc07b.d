@@ -1,0 +1,13 @@
+D:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\gcore-f9e7bccfec9fc07b.rmeta: C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\lib.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\error.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\exec.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\msg.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\prog.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\general.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\utils.rs
+
+D:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\libgcore-f9e7bccfec9fc07b.rlib: C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\lib.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\error.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\exec.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\msg.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\prog.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\general.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\utils.rs
+
+D:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\gcore-f9e7bccfec9fc07b.d: C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\lib.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\error.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\exec.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\msg.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\prog.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\general.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\utils.rs
+
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\lib.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\error.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\exec.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\msg.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\prog.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\general.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\gcore\src\utils.rs:

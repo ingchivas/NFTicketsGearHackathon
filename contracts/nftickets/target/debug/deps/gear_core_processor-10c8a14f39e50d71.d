@@ -1,0 +1,11 @@
+d:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\gear_core_processor-10c8a14f39e50d71.rmeta: C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\lib.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\common.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\configs.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\executor.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\ext.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\handler.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\processor.rs
+
+d:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\gear_core_processor-10c8a14f39e50d71.d: C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\lib.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\common.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\configs.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\executor.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\ext.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\handler.rs C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\processor.rs
+
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\lib.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\common.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\configs.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\executor.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\ext.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\handler.rs:
+C:\Users\betof\.cargo\git\checkouts\gear-bdc2b7d48ef3acbd\a57e321\core-processor\src\processor.rs:

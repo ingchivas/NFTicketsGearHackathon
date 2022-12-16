@@ -1,0 +1,14 @@
+d:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\region-918d39900fc0e5d4.rmeta: C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\lib.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\alloc.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\error.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\lock.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\os\mod.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\os\windows.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\page.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\protect.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\query.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\util.rs
+
+d:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\debug\deps\region-918d39900fc0e5d4.d: C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\lib.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\alloc.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\error.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\lock.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\os\mod.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\os\windows.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\page.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\protect.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\query.rs C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\util.rs
+
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\lib.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\alloc.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\error.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\lock.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\os\mod.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\os\windows.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\page.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\protect.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\query.rs:
+C:\Users\betof\.cargo\registry\src\github.com-1ecc6299db9ec823\region-3.0.0\src\util.rs:
