@@ -259,6 +259,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "event"
+version = "0.1.1"
+dependencies = [
+ "gear-lib",
+ "gear-wasm-builder",
+ "gstd",
+ "gtest",
+ "multitoken-io",
+]
+
+[[package]]
 name = "fixed-hash"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -337,7 +348,7 @@ dependencies = [
 [[package]]
 name = "galloc"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "dlmalloc",
 ]
@@ -345,7 +356,7 @@ dependencies = [
 [[package]]
 name = "gcore"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "gear-core-errors",
  "gsys",
@@ -356,7 +367,7 @@ dependencies = [
 [[package]]
 name = "gear-backend-common"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "derive_more",
  "gear-core",
@@ -369,7 +380,7 @@ dependencies = [
 [[package]]
 name = "gear-backend-wasmi"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "blake2-rfc",
  "derive_more",
@@ -386,7 +397,7 @@ dependencies = [
 [[package]]
 name = "gear-core"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "blake2-rfc",
  "derive_more",
@@ -403,7 +414,7 @@ dependencies = [
 [[package]]
 name = "gear-core-errors"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "derive_more",
  "parity-scale-codec",
@@ -413,7 +424,7 @@ dependencies = [
 [[package]]
 name = "gear-core-processor"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "derive_more",
  "gear-backend-common",
@@ -429,19 +440,7 @@ name = "gear-lib"
 version = "0.3.2"
 source = "git+https://github.com/gear-dapps/gear-lib.git?tag=0.3.2#f78b0e3b9b0a13a3a2ed25710dbc6ad9e99d4257"
 dependencies = [
- "gear-lib-sr25519 0.3.2",
- "gstd",
- "parity-scale-codec",
- "primitive-types",
- "scale-info",
-]
-
-[[package]]
-name = "gear-lib"
-version = "0.3.4"
-source = "git+https://github.com/gear-dapps/gear-lib.git#849c50ce5e6a99b21699d45df4c80add21cf54db"
-dependencies = [
- "gear-lib-sr25519 0.3.4",
+ "gear-lib-sr25519",
  "gstd",
  "parity-scale-codec",
  "primitive-types",
@@ -457,17 +456,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "gear-lib-sr25519"
-version = "0.3.4"
-source = "git+https://github.com/gear-dapps/gear-lib.git#849c50ce5e6a99b21699d45df4c80add21cf54db"
-dependencies = [
- "schnorrkel",
-]
-
-[[package]]
 name = "gear-wasm-builder"
 version = "0.1.2"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "anyhow",
  "cargo_metadata",
@@ -483,7 +474,7 @@ dependencies = [
 [[package]]
 name = "gear-wasm-instrument"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "wasm-instrument",
 ]
@@ -512,7 +503,7 @@ dependencies = [
 [[package]]
 name = "gstd"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "bs58",
  "futures",
@@ -530,7 +521,7 @@ dependencies = [
 [[package]]
 name = "gstd-codegen"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -540,12 +531,12 @@ dependencies = [
 [[package]]
 name = "gsys"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 
 [[package]]
 name = "gtest"
 version = "0.1.0"
-source = "git+https://github.com/gear-tech/gear.git?branch=stable#a57e3210cda835e86ad114e6b0cb9c259a45242c"
+source = "git+https://github.com/gear-tech/gear.git?branch=stable#b839f4d8d4693011b62213fde7d729f387a0f954"
 dependencies = [
  "anyhow",
  "colored",
@@ -698,21 +689,10 @@ dependencies = [
 [[package]]
 name = "multitoken-io"
 version = "0.3.3"
-source = "git+https://github.com/gear-dapps/multitoken.git#388d01ecd61e7ac0bc1a6fe134a323f3328ae586"
+source = "git+https://github.com/gear-dapps/multitoken.git?tag=0.3.3#388d01ecd61e7ac0bc1a6fe134a323f3328ae586"
 dependencies = [
- "gear-lib 0.3.2",
+ "gear-lib",
  "gstd",
-]
-
-[[package]]
-name = "nftickets"
-version = "0.1.0"
-dependencies = [
- "gear-lib 0.3.4",
- "gear-wasm-builder",
- "gstd",
- "gtest",
- "multitoken-io",
 ]
 
 [[package]]

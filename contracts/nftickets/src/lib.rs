@@ -12,7 +12,7 @@ const ZERO_ID: ActorId = ActorId::zero();
 const NFT_COUNT: u128 = 1000;
 
 #[derive(Debug, Default)]
-pub struct Event {
+pub struct EventL {
     // Creator Data
     pub owner_id: ActorId,
     pub contract_id: ActorId,
@@ -38,12 +38,12 @@ pub struct Event {
     pub id_cntr: u128,
 }
 
-static mut CONTRACT: Option<Event> = None;
+static mut CONTRACT: Option<EventL> = None;
 
 #[no_mangle]
 unsafe extern "C" fn init() {
     let cfg: InitEvent = msg::load().expect("Failed to load init data");
-    let event = Event {
+    let event = EventL {
         owner_id: cfg.owner_id,
         contract_id: cfg.mtk_ct,
         ..Default::default()
@@ -54,10 +54,10 @@ unsafe extern "C" fn init() {
 #[gstd::async_main]
 async unsafe fn main() {
     let actions: EventAction = msg::load().expect("Failed to load actions");
-    let event: &mut Event = unsafe { 
+    let event: &mut EventL = unsafe { 
         CONTRACT.get_or_insert(Default::default()) 
     };
-    match action {
+    match actions {
         EventAction::Create {
             creator,
             name,
@@ -65,12 +65,12 @@ async unsafe fn main() {
             tickets,
             date,
             location,
-        } => concert.create_ev(name, description, creator, number_of_tickets, date),
-        EventAction::Hold => concert.hold_concert().await,
+        } => event.create_ev(name, desc, creator, tickets, date),
+        EventAction::Hold => event.hold_ev().await,
         EventAction::BuyEvTickets { 
             amount, metadata 
         } => {
-            concert.buy_tickets(amount, metadata).await
+            event.buy_tickets(amount, metadata).await
         }
     }
 }
@@ -107,7 +107,7 @@ extern "C" fn meta_state() -> *mut [i32; 2] {
     gstd::util::to_leak_ptr(reply.encode())
 }
 
-impl Event {
+impl EventL {
     fn create_ev(
         &mut self,
         name: String,
