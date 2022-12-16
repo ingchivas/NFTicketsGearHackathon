@@ -2,7 +2,7 @@
 """
 Created on Wed Dec 14 18:52:18 2022
 
-@author: Claudia
+@author: Caludio
 """
 
 import os
@@ -21,8 +21,8 @@ class generator:
         self.combinations_len = 0
         self.wallet =  wallet
         # Output directory 
-        self.output_path: str = "./output"+ f"{self.images}"[2:]
-        self.text_combinations_path:str = "./combinations" + f"{self.images}.txt"[2:]
+        self.output_path: str = "./output/"+ f"{self.images}"[2:]
+        self.text_combinations_path:str = "./combinations/" + f"{self.images}.txt"[2:]
         os.makedirs(self.output_path, exist_ok=True)
     
     def load_images_paths(self, images:str ):
