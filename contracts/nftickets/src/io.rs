@@ -4,50 +4,46 @@ use gstd::{prelude::*, ActorId};
 #[derive(Debug, Encode, Decode, TypeInfo)]
 #[codec(crate = gstd::codec)]
 #[scale_info(crate = gstd::scale_info)]
-
-pub enum EventActions {
-    Create{
-        event_id: u128,
-        name: String,
-        description: String,
-        available_tickets: u128,
-        date: u128,
-        location: String,
-    },
-    Hold,
-    Purchase {
-        ammount: u128,
-        metadata: Vec<Option<TokenMetadata>>
-    },
-}
-
-#[derive(Debug, Encode, Decode, TypeInfo)]
-#[codec(crate = gstd::codec)]
-#[scale_info(crate = gstd::scale_info)]
-
-pub enum EventData {
-    Create{
+pub enum EventAction {
+    Create {
         creator: ActorId,
-        event_id: u128,
+        name: String,
+        desc: String,
         tickets: u128,
         date: u128,
         location: String,
     },
-    Hold{
-        event_id: u128,
-    },
-    Purchase {
-        event_id: u128,
-        ammount: u128,
+    Hold,
+    BuyEvTickets {
+        amount: u128,
+        metadata: Vec<Option<TokenMetadata>>,
     },
 }
 
 #[derive(Debug, Encode, Decode, TypeInfo)]
 #[codec(crate = gstd::codec)]
 #[scale_info(crate = gstd::scale_info)]
+pub enum Event {
+    EvCreation {
+        creator: ActorId,
+        event_id: u128,
+        available_tickets: u128,
+        date: u128,
+    },
+    EvHold {
+        concert_id: u128,
+    },
+    EvPurchase {
+        concert_id: u128,
+        amount: u128,
+    },
+}
 
-pub enum EventStateQ{
-    CurrentEvent,
+#[derive(Debug, Encode, Decode, TypeInfo)]
+#[codec(crate = gstd::codec)]
+#[scale_info(crate = gstd::scale_info)]
+pub enum EventStateQ {
+    ActiveEvent,
     Buyers,
     UserTickets {
         user: ActorId,
@@ -57,28 +53,26 @@ pub enum EventStateQ{
 #[derive(Debug, Encode, Decode, TypeInfo)]
 #[codec(crate = gstd::codec)]
 #[scale_info(crate = gstd::scale_info)]
-pub enum EventStateR{
-    CurrentEvent {
+pub enum EventStateR {
+    CurrentConcert {
         name: String,
         description: String,
         date: u128,
-        location: String,
-        event_id: u128,
+        n_tickets: u128,
         tickets_available: u128,
-        tickets_sold: u128,
     },
     Buyers {
-        buyers: BTreeSet<ActorId>,
+        wallets: BTreeSet<ActorId>,
     },
     UserTickets {
-        tickets: Vec<u128>,
+        tickets: Vec<Option<TokenMetadata>>,
     },
 }
 
 #[derive(Debug, Encode, Decode, TypeInfo)]
 #[codec(crate = gstd::codec)]
 #[scale_info(crate = gstd::scale_info)]
-pub struct InitData {
-    pub owner: ActorId,
-    pub contract_id: ActorId,
+pub struct InitEvent {
+    pub owner_id: ActorId,
+    pub mtk_ct: ActorId,
 }
