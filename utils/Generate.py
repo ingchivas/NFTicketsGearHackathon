@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 
 
-directory = "./utils/flk"
+directory = "./utils/flk/"
 
 def genNFTs(n, wallet):
     generator_object = generator(directory,wallet)
