@@ -1,3 +1,5 @@
+import { useAccount } from '@gear-js/react-hooks';
+
 import happyMusic from "../../assets/images/happyMusic.svg";
 import mello from "../../assets/images/mello.svg";
 
