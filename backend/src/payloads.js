@@ -1,5 +1,5 @@
-export const payloads = {
-  init: function (name: string, symbol: string, base_uri: string) {
+const payloads = {
+  init: function (name, symbol, base_uri) {
     return {
       name,
       symbol,
@@ -7,11 +7,11 @@ export const payloads = {
     }
   },
   create: function (
-    creator: string,
-    name: string,
-    description: string,
-    number_of_tickets: number,
-    date: number
+    creator,
+    name,
+    description,
+    number_of_tickets,
+    date
   ) {
     return {
       Create: {
@@ -29,7 +29,7 @@ export const payloads = {
       }
     }
   },
-  buyTickets: function (amount: number, metadata: any[]) {
+  buyTickets: function (amount, metadata) {
     return {
       BuyTickets: {
         amount: amount,
@@ -38,3 +38,5 @@ export const payloads = {
     }
   }
 };
+
+export default payloads;
