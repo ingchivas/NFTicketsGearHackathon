@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import { useAccount } from "@gear-js/react-hooks";
 
 interface PopOutProps {
   id: number;
@@ -8,8 +9,9 @@ interface PopOutProps {
 }
 
 function PopOut({ id, name, imageUrl, handlePopOutClose }: PopOutProps) {
+  const { account } = useAccount();
   const [quantity, setQuantity] = useState(0);
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState("15/12/2022");
 
   const handleMinusQuantity = () => {
     setQuantity((prevState) => {
@@ -31,9 +33,11 @@ function PopOut({ id, name, imageUrl, handlePopOutClose }: PopOutProps) {
   }
 
   const handleBuy = async () => {
+    console.log("Account:", account);
     console.log("Quantity", quantity, "Date:", date);
 
     try {
+      // Send request to backend
       const res = await fetch("http://localhost:3005/sendMessage/buyTickets", {
         method: "POST",
         headers: {
@@ -48,6 +52,16 @@ function PopOut({ id, name, imageUrl, handlePopOutClose }: PopOutProps) {
       const json = await res.json();
 
       console.log("Result from API", json);
+      console.log(json);
+
+      // Redirect to the sucessful page
+      if (json.success) {
+        console.log("Everything ok")
+        window.location.replace(`/seeNft?wallet=${account?.address}`);
+        return;
+      };
+
+      throw new Error(`Something went wrong: `, json);
     } catch (error) {
       console.error(error);
     }
