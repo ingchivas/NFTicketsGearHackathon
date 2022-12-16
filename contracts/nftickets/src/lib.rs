@@ -204,8 +204,6 @@ impl Event
         msg::reply(Event::Hold, 0).expect("Failed to reply");
     }
 
-
-
 }
 
 gstd::metadata! {
