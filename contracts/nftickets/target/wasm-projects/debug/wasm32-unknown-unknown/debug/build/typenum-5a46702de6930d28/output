@@ -1,3 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=d:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\wasm-projects\debug\wasm32-unknown-unknown\debug\build\typenum-5a46702de6930d28\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=d:\Repos\NFTicketsGearHackathon\contracts\nftickets\target\wasm-projects\debug\wasm32-unknown-unknown\debug\build\typenum-5a46702de6930d28\out\op.rs

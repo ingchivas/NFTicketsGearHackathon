@@ -163,10 +163,6 @@ impl Event
             panic!("Ammount must be greater than 0");
         }
 
-        if ammount > 5 {
-            panic!("Ammount must be less than 5");
-        }
-
         let buyer = msg::sender();
         let mut ticket_id = self.ticket_id;
         let mut tickets = self.tickets;
