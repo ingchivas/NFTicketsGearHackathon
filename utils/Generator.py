@@ -7,20 +7,22 @@ Created on Wed Dec 14 18:52:18 2022
 
 import os
 import itertools 
-from PIL import Image 
+from PIL import Image , ImageColor
+import cv2 as cv
 import random
 import ast
+import wallet
 
-max_w:  int = 24
-max_h:  int = 24
 
 class generator: 
-    def __init__(self, images: str ):
+    def __init__(self, images_path: str , wallet : str ):
         #./images 
-        self.images = images
+        self.images = images_path
         self.combinations_len = 0
+        self.wallet =  wallet
         # Output directory 
-        self.output_path: str = "./output"
+        self.output_path: str = "./output"+ f"{self.images}"[2:]
+        self.text_combinations_path:str = "./combinations" + f"{self.images}.txt"[2:]
         os.makedirs(self.output_path, exist_ok=True)
     
     def load_images_paths(self, images:str ):
@@ -52,10 +54,17 @@ class generator:
         #creates every posible combinations with the distinct images 
         self.create_combinations()  
         
+
+    def get_size(self):
+        temporary_image = cv.imread(self.unique[0][0])
+        self.max_h = temporary_image.shape[0]
+        self.max_w = temporary_image.shape[1]
+    
+        
         
     def save_image(self, image: Image.Image, i: int = 1):
         image_index = str(i).zfill(6)
-        image_file_name = f"avatar_{image_index}.png"
+        image_file_name = f"NFT_{image_index}.png"
         image_save_path = os.path.join(self.output_path, image_file_name)
         image.save(image_save_path)
     
@@ -66,62 +75,58 @@ class generator:
          
         
     def render_image(self):
-        image = Image.new('RGBA' ,(max_w,max_h),  (255,10,10))
+        image = Image.new('RGBA' ,(self.max_w,self.max_h),  self.get_RGB_color())
         image_path_sequence = self.get_combination()
         for image_path in image_path_sequence:
             layer_image = Image.open(image_path)
             image = Image.alpha_composite(image, layer_image)
         return image 
-             
+    
+    def get_RGB_color(self):
+        pallete = wallet.wallet2pallete(self.wallet)
+        palette_rgb = []
+        for i in pallete :
+            palette_rgb.append(ImageColor.getcolor(i,"RGB"))
+        
+        return palette_rgb[random.randint(0, 10)]
     
     def generate_combinations(self, n: int = 1):
         self.read_images_from_dir() #get all combinations possible
         #self.unique contains every combination of the images  
         self.combinations_len = len(self.unique)
-        for i in self.unique:
-            print(i)
         
     def write_combinations(self, ):
-        file = open("./combinations.txt" , mode= 'w')
+        file = open(self.text_combinations_path, mode= 'w')
         self.combinations_len = len(self.unique)
         file.write(f"{self.unique}\n{self.combinations_len}")
         file.close()
     def read_combinations(self):
-        file = open("./combinations.txt" , mode= 'r')
+        file = open(self.text_combinations_path , mode= 'r')
         self.unique = ast.literal_eval(file.readline())
         self.combinations_len = int(file.readline())
-        print (self.unique)
         print(len(self.unique))
         print(type(self.unique))
         
         file.close()
-    def generate_one_nft(self):
-        if os.stat("./combinations.txt").st_size == 0:
-            self.generate_combinations()
-        else:   
-            self.read_combinations()
-          
-        
-        image = self.render_image()
-        self.save_image(image, self.combinations_len)
-        
-        print(self.combinations_len)
 
     def generate_multiple_nfts(self, n: int  = 1):
-        if os.stat("./combinations.txt").st_size == 0:
+        if os.path.exists(self.text_combinations_path):
+            print(0)        
+        else:
+            file = open(self.text_combinations_path, mode = 'w')
+            file.close()
+            print(1)
+        if os.stat(self.text_combinations_path).st_size == 0:
             self.generate_combinations()
         else:   
             self.read_combinations()
         
+        
+        self.get_size()
         for i in range(n):
             image = self.render_image()
             self.save_image(image, self.combinations_len)
             print(self.combinations_len)
             self.combinations_len-= 1;
-        
-    def generate_avatars(self):
-        print("Creating")
-        for i in range(len(self.unique)):
-            image = self.render_image()
-            self.save_image(image, i)
     
+        
