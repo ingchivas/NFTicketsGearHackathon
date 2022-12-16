@@ -65,7 +65,7 @@ async unsafe fn main()
     };
     match actions {
         EventActions::Create{event_id, name, description, available_tickets, date, location} => {
-            event.create(event_id, name, description, available_tickets, date, location).await;
+            event.create_event(event_id, name, description, available_tickets, date, location).await;
         },
         EventActions::Hold => {
             event.hold().await;
